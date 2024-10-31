@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Degree Form</title>
+</head>
+<body>
+    <form method="post" action="bdValidation.html" onsubmit="return validateForm();">
+        <fieldset style="width: 250px">
+            <legend>Degree</legend>
+            <input type="checkbox" name="option[]" id="ssc" value="SSC"> SSC
+            <input type="checkbox" name="option[]" id="hsc" value="HSC"> HSC
+            <input type="checkbox" name="option[]" id="bsc" value="BSc"> BSc
+            <hr>
+            <input type="submit" name="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <script>
+        function validateForm() {
+            let checkboxes = document.getElementsByName('option[]');
+            let checkedCount = 0;
+
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    checkedCount++;
+                }
+            }
+
+            if (checkedCount >= 1) {
+                return true; // Allow form submission
+            } else {
+                alert('Please select at least ONE options.');
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gender Form</title>
+</head>
+<body>
+    <p>Please enter Gender</p>
+    <form method="post" action="dobValidation.html" onsubmit="return validateForm();">
+        <fieldset style="width: 200px">
+            <legend>GENDER</legend>
+
+            <input type="radio" id="male" name="gender" value="male"> Male
+            <input type="radio" id="female" name="gender" value="female"> Female
+            <input type="radio" id="other" name="gender" value="other"> Other
+
+            <hr>
+            <input type="submit" name="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <script>
+        function validateForm() {
+            let maleChecked = document.getElementById('male').checked;
+            let femaleChecked = document.getElementById('female').checked;
+            let otherChecked = document.getElementById('other').checked;
+
+            if (maleChecked || femaleChecked || otherChecked) {
+                return true;
+            } else {
+                alert('Please select a gender');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<table2>
+    <key sr="1">
+        <SL_NO> 23 </SL_NO>
+        <NAME> john Carter </NAME>
+        <ADMISSION_DATE> 
+            <day> 25 </day>
+            <month> 12 <month>
+            <year> 2015 </year>
+        </ADMISSION_DATE>
+
+    </key>
+    <key sr="2">
+        <SL_NO> 29 </SL_NO>
+        <NAME> Bob Marshal </NAME>
+        <ADMISSION_DATE> 
+            <day> 13</day>
+            <month> 01 <month>
+            <year> 1999 </year>
+        </ADMISSION_DATE>
+    </key>
+        <key sr="3">
+        <SL_NO> 35 </SL_NO>
+        <NAME> Clark kent </NAME>
+        <ADMISSION_DATE> 
+            <day> 17 </day>
+            <month> 06 <month>
+            <year> 2005 </year>
+        </ADMISSION_DATE>
+    </key>
+</table2>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Form</title>
+    <script>
+        function validateForm() {
+            let emailInput = document.getElementById('emailInput').value;
+
+            if (emailInput.trim() === '') {
+                alert('Please enter a valid email address');
+                return false;
+            } else {
+                let atIndex = emailInput.indexOf('@');
+                let dotIndex = emailInput.lastIndexOf('.');
+
+                // Check if '@' and '.' are present and '.' comes after '@'
+                if (atIndex > 0 && dotIndex > atIndex) {
+                    // Extract domain
+                    let domain = emailInput.slice(atIndex + 1);
+
+                    // Check if domain is allowed
+                    if (domain === 'gmail.com' || domain === 'yahoo.com' || domain === 'hotmail.com') {
+                        // Allow form submission
+                        return true;
+                    } else {
+                        alert('Only Gmail, Yahoo, and Hotmail domains are allowed');
+                        return false;
+                    }
+                } else {
+                    alert('Please enter a valid email address');
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="genderValidation.html" onsubmit="return validateForm();">
+        <fieldset style="width: 340px">
+            <legend>EMAIL</legend>
+            <input type="email" id="emailInput" name="email" value="" placeholder="sample@example.com">
+            <hr>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>

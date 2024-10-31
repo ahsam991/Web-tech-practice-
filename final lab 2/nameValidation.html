@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name Form</title>
+    <script>
+        function validateForm() {
+            var nameInput = document.getElementById('nameInput').value;
+
+            if (nameInput.trim() === '') {
+                alert("Don't keep it empty");
+                return false;
+            } else {
+                var wordCount = countWords(nameInput);
+
+                if (wordCount >= 2 && isValidName(nameInput)) {
+                    return true;
+                } else {
+                    alert("Please ensure it contains at least two words,\nstarts with a letter and only contains letters, period, and dash.");
+                    return false;
+                }
+            }
+        }
+
+        function countWords(name) {
+            // Split the name by spaces and count the number of elements
+            return name.trim().split(' ').filter(function(word) {
+                return word !== ''; // Exclude empty strings from the count
+            }).length;
+        }
+
+        function isValidName(name) {
+            // Check each character in the name
+            for (var i = 0; i < name.length; i++) {
+                var char = name[i];
+                // Check if the character is a letter, period, dash, or space
+                if (!(isLetter(char) || char === '.' || char === '-' || char === ' ')) {
+                    return false;
+                }
+            }
+            // Ensure the first character is a letter
+            return isLetter(name[0]);
+        }
+
+		function isLetter(char) {
+    // Convert the character to lowercase
+    var lowerChar = char.toLowerCase();
+    // Check if the lowercase character falls within the ASCII range for letters
+    return lowerChar >= 'a' && lowerChar <= 'z';
+}
+
+    </script>
+</head>
+<body>  
+    <form method="post" action="emailValidation.html" onsubmit="return validateForm();">
+        <fieldset style="width: 250px;">
+            <legend>NAME</legend>
+            <input type="text" id="nameInput" name="name" value="" /> <br>
+            <hr>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name Form</title>
+    <script>
+        function validateForm() {
+            var nameInput = document.getElementById('nameInput').value;
+
+            if (nameInput.trim() === '') {
+                alert("Don't keep it empty");
+                return false;
+            } else {
+                var wordCount = nameInput.trim().split(/\s+/).length;
+
+                if (wordCount >= 2 && isValidName(nameInput)) {
+                    return true;
+                } else {
+                    alert("Please ensure it contains at least two words,\nstarts with a letter and only contains letters, period, and dash.");
+                    return false;
+                }
+            }
+        }
+
+        function isValidName(name) {
+            var validChars = /^[a-zA-Z.-\s]+$/;
+            return validChars.test(name);
+        }
+    </script>
+</head>
+<body>  
+    <form method="post" action="emailValidation.html" onsubmit="return validateForm();">
+        <fieldset style="width: 250px;">
+            <legend>NAME</legend>
+            <input type="text" id="nameInput" name="name" value="" /> <br>
+            <hr>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>
