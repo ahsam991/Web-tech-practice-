@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>First HTML Site</title>
+</head>
+<body>
+    <table border="1" cellspacing="0">
+        <tr >
+             <th align="center" colspan="3">
+               
+                <b>
+                    First HTML Site
+                </b>
+            </th>
+        </tr>
+ 
+      <tr>
+        <td valign="top">
+          <b>
+       
+            Links
+ 
+         </b>
+           
+     
+          <ul>
+            <li><u><a href="page1.html"> Page-1 </u></li>
+             <li><u><a href="page2.html"> Page-1 </u></li>
+          </ul>
+ 
+        </td>
+ 
+ 
+ 
+ 
+        <td valign="top" >
+ 
+            <b>page</b>
+         
+         </td>
+ 
+        <td valign="top">
+            <b>External links</b>
+        <ul>
+            <li><u><a href="https://www.google.com/"> Google </u></li>
+            <li><u><a href="https://www.google.com/search?q=yahoo+search&sca_esv=dd78f9e0c8abb7cb&sxsrf=ADLYWIJ4c4dfwAfksKC6TaP8wBvm2eVp0Q%3A1730372931235&ei=Q2UjZ-iADreTseMPoMW_6AY&oq=yahoo+&gs_lp=Egxnd3Mtd2l6LXNlcnAiBnlhaG9vICoCCAUyChAjGIAEGCcYigUyEBAAGIAEGLEDGEMYgwEYigUyEBAAGIAEGLEDGEMYgwEYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyCxAAGIAEGLEDGIMBMgsQABiABBixAxiDATIFEAAYgAQyBRAAGIAEMgUQABiABEi3JFCiAli5DnABeAGQAQCYAesBoAGTCKoBBTAuMi4zuAEByAEA-AEBmAIDoAKuA8ICChAAGLADGNYEGEfCAg0QABiABBiwAxhDGIoFwgITEC4YgAQYsAMY0QMYQxjHARiKBZgDAIgGAZAGCpIHBTEuMS4xoAebGg&sclient=gws-wiz-serp"> Yahoo</u></li>
+        </ul>
+        </td>
+ 
+      </tr>
+ 
+     
+ 
+   
+ 
+     
+ 
+      <tr>
+       
+        <td align="center" colspan="3">Copyright</td>
+     
+      </tr>
+       
+    </table>
+ 
+ 
+</body>
+</html>
+ 
